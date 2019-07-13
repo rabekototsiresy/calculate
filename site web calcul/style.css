@@ -1,0 +1,91 @@
+body{
+    background-color: aqua;
+   
+}
+
+.corp{
+    width: 40%;
+    margin: auto;
+    border: 2px solid black;
+    height: 550px;
+    margin-top: 40px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px black; 
+}
+.formBarre{
+  
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: right;
+    background-color: grey;
+    font-family: fantasy;
+    color: white;
+    letter-spacing: 4px;
+    
+
+}
+
+.barre{
+    margin: 10px;
+}
+
+.regroupBouton{
+    /*border: 2px solid red;*/
+    height: 300px;
+    width: 100%;
+   
+    
+}
+
+.chiffre{
+   /* border: 2px solid black;*/
+    width: 50%;
+     float: left;
+    height: 550px;
+    
+}
+
+.operateur{
+   /* border: 2px solid black;*/
+    width: 40%;
+    float: right;
+     height: 550px;
+}
+
+button{
+    padding: 25px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    
+   
+}
+#supprimer{
+    width: 152px;
+}
+
+.dimension{
+    width: 80px;
+}
+
+#egale{
+    width: 80px;
+}
+h1{
+    text-align: center;
+    color: #fff;
+}
+ 
+button:active{
+    background-color:royalblue;
+}
+
+ 
+button:hover{
+    background-color:royalblue;
+}

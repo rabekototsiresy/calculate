@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset= "utf-8"/>
+        <title>calculatrice </title>
+        <link rel = "shortcut icon" href = "Logo.png">
+        <link rel="stylesheet" href="style.css">
+        <script src = "script.js"></script>
+    </head>
+    <body>
+    
+        <div class="corp">
+            <div class="enTete">
+                <h1>Calculatrice Web</h1>
+            </div>
+            <div class="barre">
+                <input type="text" id = "action"  value = "" class="formBarre" disabled = "disabled">
+            </div>
+            <div class="regroupBouton">
+                <div class="chiffre">
+               
+                    <button id = "un" value = "1">1</button>
+                    <button id = "deux" value = "2">2</button>
+                    <button id = "trois" value = "3">3</button>
+                    <button id = "quatre" value = "4">4</button>
+                    <button id = "cinq" value = "5">5</button>
+                    <button id = "six" value = "6">6</button>
+                    <button id = "sept" value = "7">7</button>
+                    <button id = "huit" value = "8">8</button>
+                    <button id = "neuf" value = "9">9</button>
+                    <button id = "zero" value = "0">0</button>
+                    <button id = "supprimer" >Suppr</button>
+                </div>
+                
+                <div class="operateur">
+                    <button id = "plus" value = "+" class="dimension">+</button>
+                    <button id = "moins" value = "-" class="dimension">-</button>
+                    <button id = "multipli" value = "*" class="dimension">*</button>
+                    <button id = "division" value = "/" class="dimension">/</button>
+                    <button id = "virgule" value = "." class="dimension">.</button>
+                    <button id = "puissance" value = "^"  class="dimension">^</button>
+                    <button id = "reset" value = "">AC</button>
+                    <button id = "egale" > = </button>
+                </div>
+                    
+
+            </div>
+        </div>
+    <script>
+var un = document.getElementById("un");
+var deux = document.getElementById("deux");
+var trois = document.getElementById("trois");
+var quatre= document.getElementById("quatre");
+var cinq = document.getElementById("cinq");
+var six = document.getElementById("six");
+var sept = document.getElementById("sept");
+var huit = document.getElementById("huit");      
+var neuf = document.getElementById("neuf");
+var zero = document.getElementById("zero");       
+var egale = document.getElementById("egale");       
+var plus = document.getElementById("plus");
+var moins = document.getElementById("moins");       
+var multipli = document.getElementById("multipli");       
+var division = document.getElementById("division");
+var virgule = document.getElementById("virgule");              
+var supprimer = document.getElementById("supprimer");             
+var reset = document.getElementById("reset");       
+reset.addEventListener("click",fonctionReset);   
+        
+        
+   
+        /*
+                   
+var puissance = document.getElementById("puissance");       
+puissance.addEventListener("click",fonctionPuissance);  
+
+function fonctionPuissance(){
+   var  nombre = document.getElementById("action").value;
+    var barre = document.getElementById("acton").value = "";
+    alert(nombre);
+    
+}
+*/
+        
+supprimer.addEventListener("click",fonctionSupprimer);         
+multipli.addEventListener("click",fonctionMultipli);   
+division.addEventListener("click",fonctionDivision);
+virgule.addEventListener("click",fonctionVirgule);         
+plus.addEventListener("click",fonctionPlus);   
+egale.addEventListener("click",fonctionEgale);
+moins.addEventListener("click",fonctionMoins);      
+un.addEventListener("click",fonctionUn);
+deux.addEventListener("click",fonctionDeux);
+trois.addEventListener("click",fonctionTrois);
+quatre.addEventListener("click",fonctionQuatre); cinq.addEventListener("click",fonctionCinq);      
+six.addEventListener("click",fonctionSix);              
+sept.addEventListener("click",fonctionSept);              
+huit.addEventListener("click",fonctionHuit);             
+neuf.addEventListener("click",fonctionNeuf);
+zero.addEventListener("click",fonctionZero);      
+function fonctionUn(){
+var un = document.getElementById("un").value;
+    document.getElementById("action").value += un;
+}   
+ function fonctionDeux(){
+     var deux = document.getElementById("deux").value;
+    document.getElementById("action").value += deux
+     ;
+ }
+         function fonctionTrois(){
+     var trois = document.getElementById("trois").value;
+    document.getElementById("action").value += trois;
+ }
+         function fonctionQuatre(){
+     var quatre = document.getElementById("quatre").value;
+    document.getElementById("action").value += quatre;
+ }
+         function fonctionCinq(){
+     var cinq = document.getElementById("cinq").value;
+    document.getElementById("action").value += cinq;
+ }
+        
+   function fonctionSix(){
+     var six = document.getElementById("six").value;
+    document.getElementById("action").value += six;
+ }  
+        
+ function fonctionSept(){
+     var sept = document.getElementById("sept").value;
+    document.getElementById("action").value += sept;
+ }
+        
+         function fonctionHuit(){
+     var huit = document.getElementById("huit").value;
+    document.getElementById("action").value += huit;
+ }
+        
+        
+          function fonctionNeuf(){
+     var neuf = document.getElementById("neuf").value;
+    document.getElementById("action").value += neuf;
+ }
+          function fonctionZero(){
+     var zero= document.getElementById("zero").value;
+    document.getElementById("action").value += zero;
+ }
+        
+function fonctionEgale(){
+    var resultat = document.getElementById("action").value;
+    var resultatFinal = eval(resultat);
+    document.getElementById("action").value = resultatFinal;
+}       
+
+         function fonctionPlus(){
+     var plus = document.getElementById("plus").value;
+    document.getElementById("action").value += plus;
+ }
+        
+function fonctionMoins(){
+     var moins = document.getElementById("moins").value;
+    document.getElementById("action").value += moins;
+ }
+        
+   
+function fonctionMultipli(){
+     var mulipli = document.getElementById("multipli").value;
+    document.getElementById("action").value +=mulipli;
+ }
+        
+           
+function fonctionDivision(){
+     var division = document.getElementById("division").value;
+    document.getElementById("action").value += division;
+ }
+        
+           
+function fonctionVirgule(){
+     var virgule = document.getElementById("virgule").value;
+    document.getElementById("action").value += virgule;
+ }
+        
+         
+function fonctionSupprimer(){
+
+     var valeur = document.getElementById("action").value;
+     var long = valeur.length;
+    var finDuChaine = long-1;
+    var resultat = valeur.substring(0,finDuChaine);
+    document.getElementById("action").value = resultat;
+ 
+ }
+        
+          
+function fonctionReset(){
+     var reset = document.getElementById("reset").value;
+    document.getElementById("action").value =reset;
+ }
+    
+
+    </script>
+    </body>
+</html>
